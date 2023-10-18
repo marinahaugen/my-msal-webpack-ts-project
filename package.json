@@ -1,0 +1,45 @@
+{
+  "name": "my-msal-webpack-ts-project",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "sideEffects": false,
+  "main": "index.js",
+  "scripts": {
+    "analyze": "source-map-explorer 'dist/*.js' --no-border-checks",
+    "build": "webpack --mode production",
+    "format": "prettier --write .",
+    "start": "webpack serve"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.2.0",
+    "@azure/msal-common": "^14.1.0",
+    "@azure/msal-react": "^2.0.4",
+    "@dnb/eufemia": "^10.9.0",
+    "bootstrap": "^5.3.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "source-map-explorer": "^2.5.3",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "css-loader": "^6.8.1",
+    "dotenv-webpack": "^8.0.1",
+    "esbuild-loader": "^2.18.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^3.0.3",
+    "prettier-plugin-packagejson": "^2.4.6",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
