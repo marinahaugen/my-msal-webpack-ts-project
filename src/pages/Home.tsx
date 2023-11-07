@@ -1,10 +1,10 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <Container>
       <ul>
         <li>
           <Link to="/about-me">About me</Link>
@@ -19,6 +19,6 @@ export default function Home() {
           <Link to="/admin">Admin</Link>
         </li>
       </ul>
-    </div>
+    </Container>
   );
 }

@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useIsAuthenticated } from '@azure/msal-react';
 import { SignInButton } from './SignInButton';
 import { SignOutButton } from './SignOutButton';
+import { Container } from 'react-bootstrap';
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -17,19 +18,18 @@ export function PageLayout(props: PageLayoutProps): JSX.Element {
 
   return (
     <>
-      <Navbar bg="primary" variant="dark" className="navbarStyle">
-        <a className="navbar-brand" href="/">
-          Using Microsoft Identity Platform
-        </a>
-        <div className="collapse navbar-collapse justify-content-end">
-          {isAuthenticated ? <SignOutButton /> : <SignInButton />}
-        </div>
+      <Navbar bg="dark" data-bs-theme="dark" className="navbarStyle">
+        <Container>
+          <a className="navbar-brand" href="/">
+            Using Microsoft Identity Platform
+          </a>
+        </Container>
+        <Container>
+          <div className="collapse navbar-collapse justify-content-end">
+            {isAuthenticated ? <SignOutButton /> : <SignInButton />}
+          </div>
+        </Container>
       </Navbar>
-      <br />
-      <br />
-      <h5>
-        <center>Welcome to the Microsoft Authentication Library app</center>
-      </h5>
       <br />
       <br />
       {props.children}

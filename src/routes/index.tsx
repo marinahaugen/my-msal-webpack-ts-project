@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SuspenseWrapper from '../SuspenseWrapper';
+import SuspenseWrapper from '../components/SuspenseWrapper';
 import publicRoutes from './publicRoutes';
 import partlyProtectedRoutes from './partlyProtectedRoutes';
 import fullyProtectedRoutes from './fullyProtectedRoutes';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { string, object, optional } from 'zod';
 
 // Define a Zod schema
@@ -26,7 +27,7 @@ const Docs: React.FC = () => {
   };
 
   return (
-    <div>
+    <Container>
       <input
         placeholder="Name"
         value={name}
@@ -44,7 +45,7 @@ const Docs: React.FC = () => {
       />
       <button onClick={handleSubmit}>Validate</button>
       <p>{message}</p>
-    </div>
+    </Container>
   );
 };
 
