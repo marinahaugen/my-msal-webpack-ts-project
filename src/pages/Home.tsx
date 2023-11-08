@@ -1,3 +1,4 @@
+import { AuthenticatedTemplate } from '@azure/msal-react';
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -15,9 +16,12 @@ export default function Home() {
         <li>
           <Link to="/docs">Docs</Link>
         </li>
-        <li>
-          <Link to="/admin">Admin</Link>
-        </li>
+
+        <AuthenticatedTemplate>
+          <li>
+            <Link to="/admin">Admin</Link>
+          </li>
+        </AuthenticatedTemplate>
       </ul>
     </Container>
   );
